@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#000000"
+    android:orientation="vertical"
     tools:context="zbf.zbfanimation.MainActivity">
 
     <LinearLayout
-        android:layout_width="368dp"
-        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
         android:orientation="horizontal"
-        tools:layout_editor_absoluteY="0dp"
-        tools:layout_editor_absoluteX="8dp">
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="0dp">
 
         <Button
             android:id="@+id/btn_alpha"
@@ -65,11 +68,41 @@
             tools:layout_editor_absoluteY="0dp"/>
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <Button
+            android:id="@+id/btn_start"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:text="开始"
+            tools:layout_editor_absoluteX="292dp"
+            tools:layout_editor_absoluteY="0dp"/>
+
+        <Button
+            android:id="@+id/btn_cancle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:text="结束"
+            tools:layout_editor_absoluteX="292dp"
+            tools:layout_editor_absoluteY="0dp"/>
+
+    </LinearLayout>
+
     <TextView
         android:id="@+id/text"
         android:layout_width="100dp"
         android:layout_height="200dp"
-        android:background="#000000"
+        android:background="#123456"
+        android:gravity="center"
         android:text="Hello World!"
         android:textColor="#ffffff"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -78,4 +111,10 @@
         app:layout_constraintTop_toTopOf="parent"
         />
 
-</android.support.constraint.ConstraintLayout>
+    <zbf.zbfanimation.view.MyPointView
+        android:id="@+id/ponitview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"/>
+
+</LinearLayout>
